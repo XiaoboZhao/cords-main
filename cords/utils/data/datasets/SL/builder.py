@@ -15,7 +15,7 @@ from cords.utils.data.data_utils import *
 import re
 import pandas as pd
 import torch
-import torchtext.data
+# import torchtext.data
 import pickle
 from ..__utils import TinyImageNet
 from cords.utils.data.data_utils import WeightedSubset
