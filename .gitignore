@@ -17,3 +17,6 @@ __pycache__
 *.txt
 *.sh
 run_*.py
+.venv
+.DS_Store
+main.py
