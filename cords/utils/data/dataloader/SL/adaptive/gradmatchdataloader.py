@@ -60,6 +60,6 @@ class GradMatchDataLoader(AdaptiveDSSDataLoader):
         self.train_model.load_state_dict(cached_state_dict)
         end = time.time()
         self.logger.info("Epoch: {0:d}, GradMatch subset selection finished, takes {1:.4f}. ".format(self.cur_epoch, (end - start)))
-        # self.logger.info("Subset indices: %s", str(subset_indices))
+        self.logger.info("Subset indices: %s", str(subset_indices))
         self.logger.info("Subset weights: %s", str(subset_weights.tolist()))
         return subset_indices, subset_weights
