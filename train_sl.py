@@ -230,6 +230,9 @@ class TrainClassifier:
                                                                 self.cfg.dataset.name,
                                                                 self.cfg.dataset.feature, dataset=self.cfg.dataset)
 
+        print(f'trainset: {len(trainset)}')
+        print(f'validset: {len(validset)}')
+        print(f'testset: {len(testset)}')
         trn_batch_size = self.cfg.dataloader.batch_size
         val_batch_size = self.cfg.dataloader.batch_size
         tst_batch_size = self.cfg.dataloader.batch_size
