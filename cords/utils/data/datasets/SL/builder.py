@@ -1080,11 +1080,13 @@ def gen_dataset(datadir, dset_name, feature, seed=42, isnumpy=False, **kwargs):
 
     elif dset_name == "mnist":
         mnist_transform = transforms.Compose([
+            torchvision.transforms.Resize((32, 32)),
             torchvision.transforms.ToTensor(),
             torchvision.transforms.Normalize((0.1307,), (0.3081,))
         ])
 
         mnist_tst_transform = transforms.Compose([
+            torchvision.transforms.Resize((32, 32)),
             torchvision.transforms.ToTensor(),
             torchvision.transforms.Normalize((0.1307,), (0.3081,))
         ])

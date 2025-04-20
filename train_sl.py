@@ -96,6 +96,8 @@ class TrainClassifier:
                 model.maxpool = nn.Identity()
         elif self.cfg.model.architecture == 'MnistNet':
             model = MnistNet()
+        elif self.cfg.model.architecture == 'LeNet5':
+            model = LeNet5()
         elif self.cfg.model.architecture == 'ResNet164':
             model = ResNet164(self.cfg.model.numclasses)
         elif self.cfg.model.architecture == 'MobileNet':
